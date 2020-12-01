@@ -15,7 +15,7 @@ export { Model } from './decorator/common/Model';
 
 // Types
 export { Const } from './decorator/types/Const';
-export { Enum } from './decorator/types/enum';
+export { Enum } from './decorator/types/Enum';
 
 // Numbers
 export { ExclusiveMaximum } from './decorator/numbers/ExclusiveMaximum';
