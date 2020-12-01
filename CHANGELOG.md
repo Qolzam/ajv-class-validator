@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/Qolzam/ajv-class-validator/compare/v1.0.0...v1.0.1) (2020-12-01)
+
+
+### Bug Fixes
+
+* exclude the __tests__ folder from build ([b7a3989](https://github.com/Qolzam/ajv-class-validator/commit/b7a39898e4ae69d3a39eb1c6e703a5cff1fef42e))
+* include dist files for npm package ([e4b1429](https://github.com/Qolzam/ajv-class-validator/commit/e4b14291d2c72219a3c3dc79899ac4a6d90d3da0))
+
 # 1.0.0 (2020-12-01)
 
 
