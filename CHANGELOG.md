@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/Qolzam/ajv-class-validator/compare/v1.0.1...v1.0.2) (2020-12-01)
+
+
+### Bug Fixes
+
+* change main path npm package ([e93b9fe](https://github.com/Qolzam/ajv-class-validator/commit/e93b9fef28db63030b7d5edd20c3099b7a8b35b5))
+
 ## [1.0.1](https://github.com/Qolzam/ajv-class-validator/compare/v1.0.0...v1.0.1) (2020-12-01)
 
 
