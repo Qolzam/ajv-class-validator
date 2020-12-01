@@ -1,0 +1,6 @@
+src
+tsconfig.json
+tsconfig-cjs.json
+.eslintignore
+.prettierrc.js
+.travis.yml

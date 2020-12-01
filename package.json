@@ -1,0 +1,107 @@
+{
+  "name": "ajv-class-validator",
+  "version": "0.0.0",
+  "description": "Lightweight class validator based on [AJV](https://github.com/ajv-validator/ajv) the fastest JSON Schema validator.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json --coverage --maxWorkers=10 --detectOpenHandles --forceExit",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "build": "tsc --noEmit false",
+    "commit": "git-cz"
+  },
+  "publishConfig": {
+    "access": "public",
+    "branches": [
+      "master"
+    ]
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "{src,__mocks__,bin}/**/*.ts": [
+      "prettier --write"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    }
+  },
+  "release": {
+    "prepare": [
+      {
+        "path": "@semantic-release/changelog"
+      },
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qolzam/ajv-class-validator.git"
+  },
+  "author": "Amir Movahedi <amir.gholzam@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Qolzam/ajv-class-validator/issues"
+  },
+  "homepage": "https://github.com/Qolzam/ajv-class-validator#readme",
+  "keywords": [
+    "typescript",
+    "ajv",
+    "class-validator",
+    "class",
+    "validator",
+    "decorator",
+    "metadata"
+  ],
+  "dependencies": {},
+  "peerDependencies": {
+    "ajv": "^7.0.0-beta.7",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "ajv-formats": "^0.6.1",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/prompt": "^11.0.0",
+    "@types/node": "^14.14.6",
+    "ajv": "^7.0.0-beta.7",
+    "del": "^6.0.0",
+    "jest": "26.6.3",
+    "reflect-metadata": "^0.1.13",
+    "ts-jest": "^26.4.4",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "commitizen": "^4.2.2",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.2"
+  }
+}

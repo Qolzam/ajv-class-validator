@@ -1,0 +1,24 @@
+sudo: required
+language: node_js
+cache:
+  directories:
+    - ~/.npm
+    - node_modules
+
+node_js:
+  - '12'
+
+os:
+  - linux
+
+jobs:
+  include:
+    - stage: release
+      script:
+        - npm run lint
+        - npm test
+        - npm run build
+      after_success:
+        - bash <(curl -s https://codecov.io/bash)
+        - npm install @semantic-release/changelog @semantic-release/git
+        - npx semantic-release
