@@ -1,0 +1,19 @@
+{
+  "name": "test-ajvcv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts"
+  },
+  "keywords": [],
+  "author": "Amir Movahedi <amir.gholzam@live.com>",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ajv": "^6.12.6",
+    "ajv-class-validator": "^1.0.2",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^9.0.0"
+  }
+}

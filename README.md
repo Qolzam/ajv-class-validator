@@ -15,6 +15,20 @@ To install packages:
 npm i ajv reflect-metadata ajv-class-validator
 ```
 
+Make sure to import `reflect-metadata` before using `ajv-class-validaitor`:
+
+```
+import "reflect-metadata";
+```
+
+Must add below options in your `tsconfig.json`:
+```
+{
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+}
+```
+
 ## Usage
 
 Adding decorator to the class and validate the data
