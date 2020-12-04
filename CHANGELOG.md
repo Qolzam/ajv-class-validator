@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/Qolzam/ajv-class-validator/compare/v1.0.2...v1.0.3) (2020-12-04)
+
+
+### Bug Fixes
+
+* validate the data instead of object itself ([1debaa2](https://github.com/Qolzam/ajv-class-validator/commit/1debaa2b5a3267c4cb28093c01ea71b75949a1fc))
+
 ## [1.0.2](https://github.com/Qolzam/ajv-class-validator/compare/v1.0.1...v1.0.2) (2020-12-01)
 
 
