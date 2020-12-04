@@ -237,10 +237,11 @@ export function compile<T>(data: object, type: new (...params: Array<any>) => T)
     if (!ajv) {
         throw new Error('AJV initializer returend null!');
     }
+    result.instance.constructor.prototype.__data = data;
     result.instance.constructor.prototype.__ajv = ajv;
     result.instance.constructor.prototype.__validate = ajv.compile(result.validationMap);
     result.instance.constructor.prototype.validate = function () {
-        const __isValid = this.constructor.prototype.__validate(this);
+        const __isValid = this.constructor.prototype.__validate(this.constructor.prototype.__data);
 
         if (!__isValid) {
             this.constructor.prototype.__errors = this.constructor.prototype.__validate.errors;
